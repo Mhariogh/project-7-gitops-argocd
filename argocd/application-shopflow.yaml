@@ -21,7 +21,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/REPLACE_YOUR_USER/REPLACE_GITOPS_REPO.git
+    repoURL: https://github.com/Mhariogh/project-7-gitops-argocd.git
     targetRevision: main
     path: apps/shopflow          # the folder ArgoCD watches
 
