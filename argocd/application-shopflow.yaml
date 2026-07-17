@@ -23,7 +23,7 @@ spec:
   source:
     repoURL: https://github.com/Mhariogh/project-7-gitops-argocd.git
     targetRevision: main
-    path: apps/shopflow          # the folder ArgoCD watches
+    path: gitops-repo/apps/shopflow          # the folder ArgoCD watches
 
   destination:
     server: https://kubernetes.default.svc   # this cluster
