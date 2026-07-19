@@ -18,8 +18,8 @@ pipeline {
 
     environment {
         AWS_REGION   = 'us-east-1'
-        ECR_ACCOUNT  = '123456789012'          // EDIT
-        GITOPS_REPO  = 'github.com/REPLACE_YOUR_USER/REPLACE_GITOPS_REPO.git'  // EDIT
+        ECR_ACCOUNT  = '664267705879'          // EDIT
+        GITOPS_REPO  = 'github.com/Mhariogh/shopflow-gitops.git'  // EDIT
 
         IMAGE_REPO   = "shopflow-${params.SERVICE}"
         IMAGE_TAG    = "build-${BUILD_NUMBER}"
