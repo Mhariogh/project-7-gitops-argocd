@@ -32,7 +32,11 @@ pipeline {
 
     stages {
         stage('Checkout app repo') {
-            steps { checkout scm }
+            steps { 
+                dir('app'){
+                     git url: 'https://github.com/Mhariogh/project-6-shopflow-phase1.git', branch: 'main'
+                }
+            }
         }
 
         stage('Build, test, scan') {
@@ -45,7 +49,7 @@ pipeline {
         stage('Docker build and scan') {
             steps {
                 sh '''
-                    docker build -t ${IMAGE}:${IMAGE_TAG} services/${SERVICE}-service
+                    docker build -t ${IMAGE}:${IMAGE_TAG} app/services/${SERVICE}-service
                     trivy image --severity CRITICAL --ignore-unfixed --exit-code 1 --no-progress ${IMAGE}:${IMAGE_TAG}
                 '''
             }
